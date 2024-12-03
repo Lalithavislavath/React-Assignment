@@ -1,0 +1,597 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+h1, h2, h3 {
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.header {
+    background: #3e3d3d;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header nav {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+}
+
+.header nav a {
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+    color: #4caf50;
+}
+
+.home {
+    padding: 4rem 2rem;
+    background: #4caf50;
+    color: rgb(252, 246, 246);
+    text-align: center;
+}
+
+.home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.home p {
+    font-size: 1.2rem;
+}
+
+.about {
+    padding: 4rem 2rem;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #4caf50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    margin: 1rem auto;
+    display: block;
+}
+
+.about-content {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-content input {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+}
+
+.about-content button {
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ec8f55;
+    margin-left: 20px;
+}
+
+.about-text {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about h3, h2 {
+    font-size: 1.5rem;
+    color: #f42d06;
+}
+
+.about ul li {
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* General Skills Section Styling */
+.skills-section {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 2rem auto;
+  }
+  
+  .skills-section h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #4caf50;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Skill List Styling */
+  .skills-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .skills-section li {
+    background-color: #ffffff;
+    padding: 0.8rem 1rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .skills-section li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Input Field for Adding Skills */
+  .skills-section .add-skill-form input {
+    width: 70%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .skills-section .add-skill-form button {
+    background-color: #4caf50;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .skills-section .add-skill-form button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Buttons (Edit, Delete, Save, Cancel) */
+  .skills-section .edit-button,
+  .skills-section .delete-button,
+  .skills-section .save-button,
+  .skills-section .cancel-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .skills-section .edit-button {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .skills-section .edit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .skills-section .delete-button {
+    background-color: #ff4d4d;
+    color: white;
+  }
+  
+  .skills-section .delete-button:hover {
+    background-color: #e60000;
+  }
+  
+  .skills-section .save-button {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .skills-section .save-button:hover {
+    background-color: #45a049;
+  }
+  
+  .skills-section .cancel-button {
+    background-color: #888;
+    color: white;
+  }
+  
+  .skills-section .cancel-button:hover {
+    background-color: #555;
+  }
+  
+  
+  .skills-section .edit-input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+    width: 60%;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .skills-section {
+      padding: 1rem;
+    }
+  
+    .skills-section ul {
+      padding: 0;
+    }
+  
+    .skills-section .add-skill-form input {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+  
+    .skills-section .add-skill-form button {
+      width: 100%;
+    }
+  
+    .skills-section .edit-input {
+      width: 100%;
+    }
+  
+    .skills-section li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .skills-section li button {
+      margin: 0.3rem 0 0;
+    }
+  }
+  
+
+.projects {
+    padding: 4rem 2rem;
+    background: white;
+    text-align: center;
+}
+
+.projects h2 {
+    margin-bottom: 2rem;
+}
+
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.project-card {
+    background: #e8b8b8;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    width: 300px;
+    border-radius: 5px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    color: #4caf50;
+    margin-bottom: 0.5rem;
+}
+
+.project-form {
+    background: #f4f0f0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    width: 700px;
+    margin: auto;
+}
+
+.project-form label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.project-form input,
+.project-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+.project-form button {
+    padding: 0.75rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project-form button:hover {
+    background-color: #45a049;
+}
+
+.contact {
+    padding: 4rem 2rem;
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 1.5rem;
+}
+
+.contact form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact label {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    margin: 10px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.contact input,
+.contact textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.contact textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.contact button {
+    padding: 0.75rem;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact button:hover {
+    background: #45a049;
+}
+
+.footer {
+    background-color: #3e3d3d;
+    color: white;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto; 
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.footer-links a {
+    color: rgb(236, 228, 228);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #4caf50;
+}
+
+.social-media {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #f42d06;
+}
+
+.social-media a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #4caf50;
+}
+
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .social-media {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .header nav {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header nav {
+        gap: 2rem;
+    }
+
+    .home h1 {
+        font-size: 2rem;
+    }
+
+    .home p {
+        font-size: 1.1rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .projects .project-card {
+        width: 90%;
+    }
+
+    .contact input,
+    .contact textarea {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header nav {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .home h1 {
+        font-size: 1.8rem;
+    }
+
+    .about h3,
+    .about h2 {
+        font-size: 1.3rem;
+    }
+
+    .about-text {
+        padding: 1rem;
+    }
+
+    .about ul li {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .projects .project-card {
+        width: 100%;
+    }
+
+    .contact input,
+    .contact textarea {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .home h1 {
+        font-size: 1.6rem;
+    }
+
+    .home p {
+        font-size: 1rem;
+    }
+
+    .about-content input,
+    .about-content button {
+        width: 100%;
+    }
+
+    .about-text {
+        padding: 0 1rem;
+    }
+
+    .projects h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact form {
+        padding: 0 1rem;
+    }
+}
